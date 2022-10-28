@@ -1,0 +1,148 @@
+.dateCol {
+    display: flex;
+    position: sticky;
+    /* sticky */
+    top: 10px;
+    width: 250px;
+    height: 40px;
+    z-index: 100;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.date {
+    display: block;
+    direction: rtl;
+    height: 40px;
+    line-height: 40px;
+    width: 75%;
+    text-align: center;
+    border: 1px solid var(--accent-color);
+    border-radius: var(--main-border-radius) 0 0 var(--main-border-radius);
+    white-space: break-spaces;
+    background-color: white;
+}
+
+.noDiff {
+    width: 100%;
+    border-radius: var(--main-border-radius);
+}
+
+.day {
+    display: block;
+    border: 1px solid var(--accent-color);
+    background-color: var(--accent-color);
+    color: black;
+    font-weight: bold;
+    border-left: none;
+    border-radius: 0 var(--main-border-radius) var(--main-border-radius) 0;
+    width: 25%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.title {
+    display: block;
+    width: 100%;
+    text-align: right;
+    direction: rtl;
+    padding-right: 5px;
+    cursor: pointer;
+    color: rgb(0, 72, 144);
+}
+
+.divider {
+    display: block;
+    height: 10px;
+}
+
+.container {
+    padding: 3rem 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+}
+
+.events {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.leftCol {
+    display: block;
+    width: 50%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 15px;
+}
+
+.rightCol {
+    display: block;
+    width: 50%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 22px;
+}
+
+/*
+.dateCol + .events > .leftCol {
+    border-right: 5px solid var(--accent-color);
+    padding-top: 20px;
+}
+
+.events:has(+ .dateCol) > .leftCol{
+    border-right: 5px solid var(--accent-color);
+    padding-bottom: 40px;
+}
+*/
+
+.rightCol .title {
+    text-align: left;
+}
+
+.r1::before {
+    content: '';
+    position: absolute;
+    right: 50%;
+    margin-right: -11px;
+    margin-top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: var(--red-accent);
+    border: 5px solid var(--accent-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.r2::before {
+    content: '';
+    position: absolute;
+    right: 50%;
+    margin-right: -11px;
+    margin-top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: var(--blue-accent);
+    border: 5px solid var(--accent-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.r3::before {
+    content: '';
+    position: absolute;
+    right: 50%;
+    margin-right: -11px;
+    margin-top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: var(--green-accent);
+    border: 5px solid var(--accent-color);
+    border-radius: 50%;
+    z-index: 1;
+}

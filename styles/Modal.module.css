@@ -1,0 +1,111 @@
+.modal {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 40%;
+    max-width: 500px;
+    min-width: 300px;
+    /*height: 80%;*/
+    height: fit-content;
+    max-height: 80%;
+    -webkit-transform: translate(-50%, -45%);
+    transform: translate(-50%, -45%);
+    background-color: rgb(255, 255, 255);
+    /* Fallback color */
+    background-color: rgba(255, 255, 255, 255);
+    border-radius: 10px;
+    direction: rtl;
+    white-space: break-spaces;
+    /*box-shadow: 0 5px 20px #d6d6d6;*/
+    box-shadow: 0 0 0 #00000061;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    /* Black w/ opacity */
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+    box-shadow: 0 19px 75px #00000061;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.modal_content {
+    background-color: #fefefe;
+    overflow: scroll;
+    padding: 1rem 0 1rem 0;
+    width: 100%;
+    height: fit-content;
+}
+
+.btn_wrapper {
+    display: block;
+    height: 70px;
+    padding-top: 20px;
+    border-top: 1px solid var(--accent-color);
+    text-align: center;
+}
+
+.btn {
+    display: grid;
+    color: black;
+    float: right;
+    font-size: 100%;
+    width: 50%;
+    height: 50px;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    background-color: white;
+    font-family: 'Vazirmatn', sans-serif;
+    align-items: center;
+}
+
+.btn:hover,
+.btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.right {
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+    background-color: var(--blue-accent);
+    color: white;
+}
+
+.left {
+    border-radius: 5px 0 0 5px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.link {
+    color: var(--blue-accent);
+}
+
+.hashtag {
+    color: var(--red-accent);
+}
+
+.mention {
+    color: plum;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal {
+        transition: none;
+    }
+}

@@ -1,0 +1,267 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /*background-color: var(--back-color);*/
+  background: rgb(220, 236, 244);
+  background: linear-gradient(180deg, rgba(220, 236, 244, 1) 0%, rgba(245, 245, 247, 1) 15%);
+}
+
+.footer {
+  display: flex;
+  padding: 1rem 0 3rem 0;
+  flex-direction: column;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+}
+
+.footer span {
+  direction: rtl;
+}
+
+.footer a {
+  color: var(--blue-accent);
+}
+
+.footerSlogan {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  width: 100%;
+  max-width: 700px;
+}
+
+.leftSlogan {
+  display: block;
+  text-align: left;
+  width: 50%;
+  padding-left: 30px;
+}
+
+.rightSlogan {
+  display: block;
+  text-align: right;
+  width: 50%;
+  padding-right: 30px;
+}
+
+.footerCredit span {
+  display: block;
+  text-align: center;
+}
+
+.vline {
+  display: block;
+  width: 5px;
+  height: 100%;
+  background-color: var(--accent-color);
+  position: fixed;
+  right: 50%;
+  margin-right: -3px;
+  top: 0;
+  z-index: 0;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row-reverse;
+  min-width: 768px;
+  max-width: 1200px;
+  height: 394px;
+  align-items: center;
+  z-index: 1;
+  margin: 4rem 1rem;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.intro a {
+  color: var(--blue-accent);
+}
+
+.mahsaAmini {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+}
+
+.mahsaDate {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+}
+
+.imageContainer {
+  position: relative;
+  width: 50%;
+  height: 394px;
+}
+
+.introImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.introText {
+  font-size: 1em;
+  direction: rtl;
+  width: 50%;
+  padding: 30px;
+  height: fit-content;
+  background-color: white;
+}
+
+.introSource {
+  text-align: left;
+}
+
+.introDisclaimer {
+  display: block;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.wlfContainer {
+  margin-bottom: 50px;
+  border-radius: 50%;
+  z-index: 1;
+  background-color: var(--accent-color);
+}
+
+.wlfImage {
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+@media (max-width: 600px) {
+  .leftSlogan {
+    padding: 0;
+  }
+
+  .rightSlogan {
+    padding: 0;
+    width: 30%;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    height: fit-content;
+  }
+
+  .introText {
+    font-size: 17px;
+    direction: rtl;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .imageContainer {
+    width: 100%;
+    height: 300px;
+  }
+
+  .introImage {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1100px) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    min-width: 0;
+    height: fit-content;
+  }
+
+  .introText {
+    font-size: 17px;
+    direction: rtl;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .imageContainer {
+    width: 100%;
+    height: 394px;
+  }
+
+  .introImage {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* settings */
+.settings {
+  background-color: white;
+  border-radius: var(--main-border-radius);
+  height: 115px;
+  padding: 20px;
+  z-index: 100;
+}
+
+.setting {
+  display: block;
+  text-align: center;
+}
+
+#radios {
+  margin-top: 10px;
+  border-radius: var(--main-border-radius);
+  overflow: hidden;
+}
+
+#radios label {
+  cursor: pointer;
+  position: relative;
+}
+
+#radios label+label {
+  margin-left: 0px;
+}
+
+.input {
+  opacity: 0;
+  /* hidden but still tabable */
+  position: absolute;
+}
+
+.input+span {
+  color: var(--blue-accent);
+  padding: 20px 30px;
+  transition: all 0.4s;
+  background-color: #D9E7FD;
+  -webkit-transition: all 0.4s;
+}
+
+.input:checked+span {
+  color: #D9E7FD;
+  background-color: var(--blue-accent);
+}
+
+.input:focus+span {
+  color: #fff;
+}
