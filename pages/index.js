@@ -1,6 +1,6 @@
 import styles from '../styles/Home.module.css';
 import { useState } from 'react';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import mahsaPic from '../public/mahsaamini.jpeg';
 import wlfPic from '../public/wlf.png';
 import Timeline from '../components/timeline';
