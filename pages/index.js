@@ -6,6 +6,8 @@ import mahsaPic from '../public/mahsaamini.jpeg';
 import wlfPic from '../public/wlf.png';
 import Timeline from '../components/timeline';
 import * as gtag from '../lib/gtag';
+import { loadEvents } from "../lib/loadEvents";
+import { SWRConfig } from "swr";
 
 const vazir = Vazirmatn({
   variable: '--vazir-font',
@@ -14,7 +16,22 @@ const vazir = Vazirmatn({
   weight: "400"
 })
 
-export default function Home() {
+export async function getStaticProps() {
+  // Instead of fetching your `/api` route you can call the same
+  // function directly in `getStaticProps`
+  const events = await loadEvents(10);
+
+  // Props returned will be passed to the page component
+  return { 
+    props: {
+      fallback: {
+        '/api/staticdata': events
+      }
+    } 
+  }
+}
+
+export default function Home(fallback) {
   const [detail, setDetail] = useState("1");
 
   const handleDetail = (value) => {
@@ -70,7 +87,9 @@ export default function Home() {
           </label>
         </div>
       </div>
-      <Timeline detail={detail} />
+      <SWRConfig value = {fallback}>
+        <Timeline detail={detail} fallback = {fallback}/>
+      </SWRConfig>
       <div className={styles.wlfContainer}>
         <Image
           src={wlfPic}
