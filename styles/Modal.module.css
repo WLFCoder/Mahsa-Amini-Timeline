@@ -56,13 +56,11 @@
     display: grid;
     color: black;
     float: right;
-    font-size: 100%;
     width: 50%;
     height: 50px;
     border: 1px solid var(--accent-color);
     border-radius: 5px;
     background-color: white;
-    font-family: 'Vazirmatn', sans-serif;
     align-items: center;
 }
 

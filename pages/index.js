@@ -1,3 +1,4 @@
+import { Vazirmatn } from '@next/font/google';
 import styles from '../styles/Home.module.css';
 import { useState } from 'react';
 import Image from 'next/image';
@@ -5,6 +6,13 @@ import mahsaPic from '../public/mahsaamini.jpeg';
 import wlfPic from '../public/wlf.png';
 import Timeline from '../components/timeline';
 import * as gtag from '../lib/gtag';
+
+const vazir = Vazirmatn({
+  variable: '--vazir-font',
+  display: 'swap',
+  subsets: ['regular'],
+  weight: "400"
+})
 
 export default function Home() {
   const [detail, setDetail] = useState("1");
@@ -20,7 +28,7 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.main}>
+    <div className={styles.main + " " + vazir.className}>
       <div className={styles.vline}></div>
       <div className={styles.intro}>
         <div className={styles.imageContainer}>

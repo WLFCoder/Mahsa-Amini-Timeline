@@ -5,19 +5,8 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <body>
-        {/*<noscript>
-          <iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-  </noscript>*/}
         <Main />
         <NextScript />
 

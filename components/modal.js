@@ -41,7 +41,7 @@ export default function Modal({ showModal, setShowModal, content, source }) {
             </div>
             <div className={styles.btn_wrapper}>
                 <a onClick={() => setShowModal(false)} className={styles.btn + " " + styles.right} href={source} target="_blank" rel="noopener noreferrer">مشاهده در منبع</a>
-                <button onClick={() => setShowModal(false)} className={styles.btn + " " + styles.left}>بستن</button>
+                <a onClick={() => setShowModal(false)} className={styles.btn + " " + styles.left}>بستن</a>
             </div>
         </div>
     )

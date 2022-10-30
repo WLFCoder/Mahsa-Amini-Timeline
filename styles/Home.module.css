@@ -112,7 +112,7 @@
 .introImage {
   object-fit: cover;
   width: auto;
-  height: auto;
+  height: 394px;
 }
 
 .introText {
@@ -120,7 +120,7 @@
   direction: rtl;
   width: 50%;
   padding: 30px;
-  height: 394px;
+  height: fit-content;
   background-color: white;
 }
 
