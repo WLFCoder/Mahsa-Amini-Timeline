@@ -105,7 +105,7 @@ export default function Home(fallback) {
         <div className={styles.footerCredit}>
           <span>دیتا از کانال تلگرام <a href="https://t.me/VahidOnline" target="_blank" rel="noopener noreferrer">VahidOnline</a></span>
           <span>با الهام از ایده <a href="https://mahsaamini.notion.site/" target="_blank" rel="noopener noreferrer">روزشمار</a> <a href="https://twitter.com/cryptosamz">cryptosamz@</a></span>
-          <span>با یاد <a href="https://youtu.be/zDSUzyUwOGQ?t=927" target="_blank" rel="noopener noreferrer">جادی</a> در آبان ۱۴۰۱ روی گیتهاب قرار گرفت</span>
+          <span>با یاد <a href="https://youtu.be/zDSUzyUwOGQ?t=927" target="_blank" rel="noopener noreferrer">جادی</a> در آبان ۱۴۰۱ روی <a href="https://github.com/WLFCoder/Mahsa-Amini-Timeline" target="_blank" rel="noopener noreferrer">گیتهاب</a> قرار گرفت</span>
         </div>
       </div>
     </div>
