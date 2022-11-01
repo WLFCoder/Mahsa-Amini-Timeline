@@ -35,7 +35,7 @@ export default function Modal({ showModal, setShowModal, content, source }) {
     }
 
     return (
-        <div id="msgModal" className={styles.modal + " " + (showModal && styles.show)}>
+        <div id="msgModal" className={styles.modal + " " + (showModal ? styles.show : "")}>
             <div className={styles.modal_content}>
                 <div>{parseContent(content)}</div>
             </div>

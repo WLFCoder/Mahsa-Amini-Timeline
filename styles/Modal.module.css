@@ -10,29 +10,30 @@
     /*height: 80%;*/
     height: fit-content;
     max-height: 80%;
-    -webkit-transform: translate(-50%, -45%);
-    transform: translate(-50%, -45%);
+    transform: translate(-50%, -40%);
+    -webkit-transform: translate(-50%, -40%);
     background-color: rgb(255, 255, 255);
     /* Fallback color */
     background-color: rgba(255, 255, 255, 255);
     border-radius: 10px;
+    box-shadow: var(--modal-shadow);
     direction: rtl;
     white-space: break-spaces;
     /*box-shadow: 0 5px 20px #d6d6d6;*/
-    box-shadow: 0 0 0 #00000061;
     padding: 20px;
     opacity: 0;
+    pointer-events: none;
     visibility: hidden;
-    transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
+    transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1), opacity 500ms cubic-bezier(0.16, 1, 0.3, 1);
+    -webkit-transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1), opacity 500ms cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
     /* Black w/ opacity */
 }
 
-.show {
+.modal.show {
+    pointer-events: auto;
     visibility: visible;
     opacity: 1;
-    box-shadow: 0 19px 75px #00000061;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
